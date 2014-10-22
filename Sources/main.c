@@ -84,7 +84,7 @@ int main()
             carteTiree = tirer_carte(BANQUE);
             scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
         }
-        if((scoreBanque + scoreBanqueCachee) < 21)
+        if((scoreBanque + scoreBanqueCachee) < 21 && scoreJoueur < 21)
         {
             
             printf("\nvotre main: ");
