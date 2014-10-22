@@ -1,3 +1,14 @@
+/**
+ * \file Fonction-tirer_carte.c
+ * \brief fichier de la fonction
+ * \author Arthur LEMEE
+ * \version 1.0
+ * \date 22 octobre 2014
+ * 
+ * tire une carte pour un joueur
+ * 
+ */
+ 
 #include <stdio.h>
 #include <stdlib.h>
 #define NB_CARTES 52
@@ -17,7 +28,10 @@ short cartes[52];
 short nb_as_joueur;
 short nb_as_banque;
 
-
+/**
+ *\fn short tirer_carte(short joueur)
+ *\brief tire aléatoirement une carte du jeu "libre" pour un joueur
+ */
 short tirer_carte(short joueur)
 {
     int numCarteTiree;
