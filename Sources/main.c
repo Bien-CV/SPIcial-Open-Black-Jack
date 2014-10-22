@@ -56,7 +56,6 @@ struct {t_num numero; t_couleur couleur;}s_carte;
 int main()
 {
     srand((unsigned)time(NULL));
-    int indice1, indice2;
     nb_as_banque = 0;
     nb_as_joueur = 0;
     scoreJoueur = 0;
