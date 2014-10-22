@@ -76,9 +76,9 @@ int main()
     
     
     
-    While((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) && ((scoreBanque + scoreBanqueCachee) >= 17)))
+    while((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) && ((scoreBanque + scoreBanqueCachee) >= 17)))
     {
-        if((scoreBanque + scoreBanqueCache) < 17)
+        if((scoreBanque + scoreBanqueCachee) < 17)
         {
             carteTiree = tirer_carte(BANQUE);
             scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
@@ -87,13 +87,13 @@ int main()
         {
             
             printf("\nvotre main: ");
-            afficher_main(JOUEUR);
+            afficher_mains(JOUEUR);
             printf("\nMain de la banque: ");
-            afficher_main(BANQUE);
+            afficher_mains(BANQUE);
             printf("\nle score:\nVous: %i / Banque: %i", scoreJoueur, scoreBanque);
             do
             {
-                print("\n1 - Tirer une autre carte\n2 - s'arreter la\n-------------\nVotre choix:");
+                printf("\n1 - Tirer une autre carte\n2 - s'arreter la\n-------------\nVotre choix:");
                 scanf("%i", &choixJoueur);
             }while(choixJoueur != 1 && choixJoueur != 2);
             if(choixJoueur == 1)
@@ -125,9 +125,9 @@ int main()
         }
     }
     printf("\nvotre main: ");
-    afficher_main(JOUEUR);
+    afficher_mains(JOUEUR);
     printf("\nMain de la banque: ");
-    afficher_main(BANQUE);
+    afficher_mains(BANQUE);
     
 
     return 0;
