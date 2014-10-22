@@ -36,7 +36,7 @@ short tirer_carte(short joueur)
     do
     {
         numCarteTiree = rand()%(51);
-    }while(cartes[numCarteTiree] != LIBRE)
+    }while(cartes[numCarteTiree] != LIBRE);
     cartes[numCarteTiree] = joueur;
     
 }
