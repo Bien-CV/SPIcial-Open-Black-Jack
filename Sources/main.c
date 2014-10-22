@@ -38,7 +38,7 @@ short tirer_carte(short joueur)
         numCarteTiree = rand()%(51);
     }while(cartes[numCarteTiree] != LIBRE);
     cartes[numCarteTiree] = joueur;
-    
+    return(numCarteTiree+1)
 }
 
 
@@ -47,7 +47,9 @@ int main()
     int indice1, indice2;
     nbAsBanque = 0;
     nbAsJoueur = 0;
+    short carteDuJoueur;
 
+    carteDuJoueur = tirer_carte(JOUEUR);
     for(indice1 = 0; indice2 < NB_CARTES; indice1++)
     {
         cartes[indice1] = LIBRE;
