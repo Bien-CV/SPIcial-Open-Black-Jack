@@ -1,3 +1,12 @@
+/**
+ * \fn void afficher_mains(short joueur)
+ * \brief 
+ */
+
+
+
+
+
 void afficher_mains(short joueur)
 {
   int i;
