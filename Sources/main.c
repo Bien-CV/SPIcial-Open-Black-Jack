@@ -19,14 +19,14 @@
 #define FIN_TREFLES 51
 
 
-    short cartes[52];
-    short nb_as_joueur;
-    short nb_as_banque;
+short cartes[52];
+short nb_as_joueur;
+short nb_as_banque;
     
-    short carteTiree;
-    short scoreJoueur;
-    short scoreBanque;
-    short scoreBanqueCachee;
+short carteTiree;
+short scoreJoueur;
+short scoreBanque;
+short scoreBanqueCachee;
     
     
 /*
@@ -44,6 +44,7 @@ int main()
     scoreJoueur = 0;
     scoreBanque = 0;
     scoreBanqueCachee = 0;
+    int choixJoueur = -1;
     
     
     carteTiree = tirer_carte(BANQUE_CACHEE);
@@ -57,10 +58,28 @@ int main()
     scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
     
     
-    While((scoreJoueur < 21) && ((scoreBanque + scoreBanqueCachee) < 21) && ())
+    While((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) && ((scoreBanque + scoreBanqueCachee) >= 17)))
     {
-        if((scoreBanque + scoreBanqueCache) )
+        if((scoreBanque + scoreBanqueCache) < 17)
+        {
+            carteTiree = tirer_carte(BANQUE);
+            scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
+        }
+        if((scoreBanque + scoreBanqueCachee) < 21)
+        {
+            do
+            {
+                print("\n1 - Tirer une autre carte\n2 - s'arreter la\n-------------\nVotre choix:");
+                scanf("%i", &choixJoueur);
+            }while(choixJoueur != 1 && choixJoueur != 2);
+            if(choixJoueur == 1)
+            {
+                carteTiree = tirer_carte(JOUEUR);
+                scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
+            }
+        }
     }
+    
 
     return 0;
 }
