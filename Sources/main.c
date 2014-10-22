@@ -17,23 +17,32 @@
 #define DEB_TREFLE 39
 #define FIN_TREFLE 51
 
+
+    short cartes[52];
+    short nbAsJoueur;
+    short nbAsBanque;
+    
+    
+
 typedef enum {COEURS, CARREAUX, PIQUES, TREFLES}t_couleur;
 typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, valet, dame, rois}t_num;
 
 struct {t_num numero; t_couleur couleur;}s_carte;
 
 
-short TirerCarte(short joueur)
+short tirer_carte(short joueur)
 {
-    int numCarteTiree = rand()%(51)
+    int numCarteTiree
+    do
+    {
+        numCarteTiree = rand()%(51)
+    }while(cartes[numCarteTiree] != LIBRE)
+    
 }
 
 
 int main()
 {
-    short cartes[52];
-    short nbAsJoueur;
-    short nbAsBanque;
 
     int indice1, indice2;
 
