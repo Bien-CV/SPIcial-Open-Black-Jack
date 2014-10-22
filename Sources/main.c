@@ -1,5 +1,12 @@
 /**
+ * \file main.c
+ * \brief programme principal
  * \author Arthur LEMEE
+ * \version 1.0
+ * \date 22 octobre 2014
+ * 
+ * programme de jeu: Black Jack
+ * 
  */
 #include <stdio.h>
 #include <stdlib.h>
