@@ -20,7 +20,10 @@ short cartes[52];
 short nb_as_joueur;
 short nb_as_banque;
 
-
+/**
+ * \fn short donner_valeur_carte(short joueur,short carte)
+ * \brief Retourne la valeur de la carte prise en paramètre.
+ */
 short donner_valeur_carte(short joueur,short carte){
   carte=carte%13;
   
@@ -34,6 +37,10 @@ short donner_valeur_carte(short joueur,short carte){
   return (carte+1);
 }
 
+/**
+ * \fn short evaluer_score(short joueur,short carte_recue,short *score)
+ * \brief Met à jour le score du joueur courant.
+ */
 short evaluer_score(short joueur,short carte_recue,short *score){
   return(*score=(*score)+donner_valeur_carte(joueur,carte_recue));
 }
