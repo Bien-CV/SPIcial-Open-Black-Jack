@@ -39,8 +39,8 @@ struct {t_num numero; t_couleur couleur;}s_carte;
 int main()
 {
     int indice1, indice2;
-    nbAsBanque = 0;
-    nbAsJoueur = 0;
+    nb_as_banque = 0;
+    nb_as_joueur = 0;
     scoreJoueur = 0;
     scoreBanque = 0;
     scoreBanqueCachee = 0;
