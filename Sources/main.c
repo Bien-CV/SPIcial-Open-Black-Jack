@@ -23,12 +23,12 @@
     short nb_as_banque;
     
     
-
+/*
 typedef enum {COEURS, CARREAUX, PIQUES, TREFLES}t_couleur;
 typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, valet, dame, rois}t_num;
 
 struct {t_num numero; t_couleur couleur;}s_carte;
-
+*/
 
 short tirer_carte(short joueur)
 {
