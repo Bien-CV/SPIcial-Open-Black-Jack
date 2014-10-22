@@ -30,13 +30,13 @@ short nb_as_banque;
 
 short tirer_carte(short joueur)
 {
-    int numCarteTiree;
+    short numCarteTiree;
     do
     {
         numCarteTiree = rand()%(51);
     }while(cartes[numCarteTiree] != LIBRE);
     cartes[numCarteTiree] = joueur;
-    return(numCarteTiree+1);
+    return(numCarteTiree);
 }
 
 
@@ -48,7 +48,7 @@ short tirer_carte(short joueur)
 
 void afficher_carte(short num)
 {
-	if ( ( num < DEB_COEURS ) && ( num > FIN_TREFLES ) ) {
+    if ( ( num < DEB_COEURS ) || ( num > FIN_TREFLES ) ) {
 		printf("Carte incorrecte.");
 		return;
 	}
@@ -90,15 +90,15 @@ void afficher_carte(short num)
 void afficher_mains(short joueur)
 {
   int i;
-  for(i=0; i<cartes[52]; i++)
+  for(i = 0;  i < 52; i++)
     {
-    if(joueur==JOUEUR)
+    if(cartes[i]==joueur)
       {
-        afficher_carte(num);
+        afficher_carte(i);
       }
-      else{
+      /*else{
         afficher_mains_cachee();
-      }
+      }*/
     }
 }
 
@@ -109,19 +109,15 @@ void afficher_mains(short joueur)
 
 //afficher_mains_cachee.c
 
-void afficher_mains_cachee(short joueur)
+void afficher_mains_cachee(void)
 {
 	int i;
-  for(i=0; i<cartes[52]; i++)
+  for(i = 0; i < 52; i++)
     {
-    if(joueur==BANQUE)
+    if(cartes[i] == BANQUE || cartes[i] == BANQUE_CACHEE)
       {
-        afficher_carte(num);
-       
+        afficher_carte(i);
       }
-      else if(joueur==BANQUE_CACHEE)
-      {
-		afficher_carte(num);  
 	}
 }
 
@@ -135,7 +131,8 @@ void afficher_mains_cachee(short joueur)
  * \fn short donner_valeur_carte(short joueur,short carte)
  * \brief Retourne la valeur de la carte prise en paramètre.
  */
-short donner_valeur_carte(short joueur,short carte){
+short donner_valeur_carte(short joueur, short carte)
+{
   carte=carte%13;
   
   if(!carte){
@@ -152,6 +149,9 @@ short donner_valeur_carte(short joueur,short carte){
  * \fn short evaluer_score(short joueur,short carte_recue,short *score)
  * \brief Met à jour le score du joueur courant.
  */
-short evaluer_score(short joueur,short carte_recue,short *score){
-  return(*score=(*score)+donner_valeur_carte(joueur,carte_recue));
+short evaluer_score(short joueur, short carte_recue,short *score)
+{
+    *score=(*score)+donner_valeur_carte(joueur,carte_recue);
+    return(*score);
+  //return(/**score=*/(*score)+donner_valeur_carte(joueur,carte_recue));
 }
