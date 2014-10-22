@@ -14,8 +14,8 @@
 #define FIN_CARREAUX 25
 #define DEB_PIQUES 26
 #define FIN_PIQUES 38
-#define DEB_TREFLE 39
-#define FIN_TREFLE 51
+#define DEB_TREFLES 39
+#define FIN_TREFLES 51
 
 
     short cartes[52];
