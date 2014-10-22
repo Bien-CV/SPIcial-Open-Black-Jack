@@ -116,13 +116,16 @@ int main()
                 printf("Vous avez perdu avec un score de %i contre un score de %i!\n:(", scoreJoueur, scoreBanque + scoreBanqueCachee);
         }else
         {
-            if(scoreJoueur == 21)
+            if(scoreJoueur != (scoreBanque + scoreBanqueCachee))
             {
-                printf("vous avez gagne avec un BlackJack contre un score de %i\n^^ :D ;P", scoreBanque + scoreBanqueCachee);
-            }else
-            {
-                printf("vous avez gagne avec un score de %i contre un score de %i\n:D", scoreJoueur, scoreBanque + scoreBanqueCachee);
-            }
+                if(scoreJoueur == 21)
+                {
+                    printf("vous avez gagne avec un BlackJack contre un score de %i\n^^ :D ;P", scoreBanque + scoreBanqueCachee);
+                }else
+                {
+                    printf("vous avez gagne avec un score de %i contre un score de %i\n:D", scoreJoueur, scoreBanque + scoreBanqueCachee);
+                }
+            }else printf("il y a egalite entre vous et la banque avec un score de %i\n>_<",scoreJoueur)
         }
     }else
     {
