@@ -125,7 +125,7 @@ int main()
                 {
                     printf("vous avez gagne avec un score de %i contre un score de %i\n:D", scoreJoueur, scoreBanque + scoreBanqueCachee);
                 }
-            }else printf("il y a egalite entre vous et la banque avec un score de %i\n>_<",scoreJoueur)
+            }else printf("il y a egalite entre vous et la banque avec un score de %i\n>_<",scoreJoueur);
         }
     }else
     {
