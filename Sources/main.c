@@ -1,3 +1,6 @@
+/**
+ * \author Arthur LEMEE
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include "fonctions.h"
@@ -36,6 +39,13 @@ typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, val
 struct {t_num numero; t_couleur couleur;}s_carte;
 */
 
+
+/**
+ * \fn int main()
+ * \brief fonction principale
+ * distribue les cartes, puis demande à la banque et au joueur s'ils veulent tirer des cartes.'
+ * Arrête le jeu lorsque le score est trop élevé ou quand les joueur ne tirent plus de carte'
+ */
 int main()
 {
     int indice1, indice2;
@@ -58,6 +68,7 @@ int main()
     scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
     
     
+    
     While((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) && ((scoreBanque + scoreBanqueCachee) >= 17)))
     {
         if((scoreBanque + scoreBanqueCache) < 17)
@@ -67,6 +78,12 @@ int main()
         }
         if((scoreBanque + scoreBanqueCachee) < 21)
         {
+            
+            printf("\nvotre main: ");
+            afficher_main(JOUEUR);
+            printf("\nMain de la banque: ");
+            afficher_main(BANQUE);
+            printf("\nle score:\nVous: %i / Banque: %i", scoreJoueur, scoreBanque);
             do
             {
                 print("\n1 - Tirer une autre carte\n2 - s'arreter la\n-------------\nVotre choix:");
@@ -100,6 +117,10 @@ int main()
             }
         }
     }
+    printf("\nvotre main: ");
+    afficher_main(JOUEUR);
+    printf("\nMain de la banque: ");
+    afficher_main(BANQUE);
     
 
     return 0;
