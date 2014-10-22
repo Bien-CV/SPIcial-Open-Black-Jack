@@ -10,11 +10,3 @@ void afficher_mains(short joueur)
     }
 }
 
-int main()
-{
-  int i;
-for(i=0;i<JOUEUR;i++){
-afficher_mains(joueur)
-}
-return 0;
-}
