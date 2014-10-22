@@ -123,6 +123,18 @@ int main()
                 printf("vous avez gagne avec un score de %i contre un score de %i\n:D", scoreJoueur, scoreBanque + scoreBanqueCachee);
             }
         }
+    }else
+    {
+        if(scoreJoueur > 21)
+        {
+            printf("Vous avez perdu, votre score %i est supérieur à 21\nscore de la banque: %i\n:'(", scoreJoueur, scoreBanque+scoreBanqueCachee);
+        }else
+        {
+            if((scoreBanque + scoreBanqueCachee) > 21)
+            {
+                printf("Vous avez gagne!!! Le score de la banque %i est supérieur à 21\nvotre score: %i\n^^ ;P :D", scoreBanque+scoreBanqueCachee, scoreJoueur);
+            }
+        }
     }
     printf("\nvotre main: ");
     afficher_mains(JOUEUR);
