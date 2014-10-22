@@ -25,7 +25,7 @@ struct {t_num numero; t_couleur couleur;}s_carte;
 
 short TirerCarte(short joueur)
 {
-    
+    int numCarteTiree = rand()%(51)
 }
 
 
