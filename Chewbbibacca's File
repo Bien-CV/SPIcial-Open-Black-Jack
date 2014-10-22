@@ -23,9 +23,9 @@ typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, val
 struct {t_num numero; t_couleur couleur;}s_carte;
 
 
-short TrierCarte(short joueur)
+short TirerCarte(short joueur)
 {
-
+    
 }
 
 
