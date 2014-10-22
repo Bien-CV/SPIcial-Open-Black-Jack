@@ -1,7 +1,8 @@
 /**
  * \fn void afficher_mains(short joueur)
- * \brief 
+ * \brief Affiche la main d'un joueur
  */
+
 
 
 
