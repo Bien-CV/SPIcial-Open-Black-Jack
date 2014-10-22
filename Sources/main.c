@@ -22,6 +22,10 @@
     short nb_as_joueur;
     short nb_as_banque;
     
+    short carteTiree;
+    short scoreJoueur;
+    short scoreBanque;
+    
     
 /*
 typedef enum {COEURS, CARREAUX, PIQUES, TREFLES}t_couleur;
@@ -35,16 +39,14 @@ int main()
     int indice1, indice2;
     nbAsBanque = 0;
     nbAsJoueur = 0;
-    short carteTiree;
+    scoreJoueur = 0;
+    scoreBanque = 0;
     
     
-    carteTiree = tirer_carte(BANQUE_CACHEE);
-    carteTiree = tirer_carte(BANQUE);
     
-    carteTiree = tirer_carte(JOUEUR);
-    carteTiree = tirer_carte(JOUEUR);
-    
-    
+    While(scoreJoueur)
+    {
+    }
 
     return 0;
 }
