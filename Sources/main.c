@@ -77,7 +77,7 @@ int main()
     
     
     
-    while((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) && ((scoreBanque + scoreBanqueCachee) < 17)))
+    while((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) || ((scoreBanque + scoreBanqueCachee) < 17)))
     {
         if((scoreBanque + scoreBanqueCachee) < 17)
         {
