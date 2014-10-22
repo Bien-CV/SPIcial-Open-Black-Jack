@@ -47,13 +47,16 @@ int main()
     int indice1, indice2;
     nbAsBanque = 0;
     nbAsJoueur = 0;
-    short carteDuJoueur;
-
-    carteDuJoueur = tirer_carte(JOUEUR);
-    for(indice1 = 0; indice2 < NB_CARTES; indice1++)
-    {
-        cartes[indice1] = LIBRE;
-    }
+    short carteTiree;
+    
+    
+    carteTiree = tirer_carte(BANQUE_CACHEE);
+    carteTiree = tirer_carte(BANQUE);
+    
+    carteTiree = tirer_carte(JOUEUR);
+    carteTiree = tirer_carte(JOUEUR);
+    
+    
 
     return 0;
 }
