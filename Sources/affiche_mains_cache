@@ -8,7 +8,7 @@ void afficher_mains_cachee(short joueur)
         afficher_carte(num);
        
       }
-      if(joueur==BANQUE_CACHEE)
+      else if(joueur==BANQUE_CACHEE)
       {
 		afficher_carte(num);  
 	}
