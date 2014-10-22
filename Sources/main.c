@@ -25,6 +25,7 @@
     short carteTiree;
     short scoreJoueur;
     short scoreBanque;
+    short scoreBanqueCachee;
     
     
 /*
@@ -41,11 +42,23 @@ int main()
     nbAsJoueur = 0;
     scoreJoueur = 0;
     scoreBanque = 0;
+    scoreBanqueCachee = 0;
     
     
+    carteTiree = tirer_carte(BANQUE_CACHEE);
+    scoreBanqueCachee = evaluer_score(BANQUE_CACHEE, carteTiree, &scoreBanqueCachee);
+    carteTiree = tirer_carte(BANQUE);
+    scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
     
-    While(scoreJoueur)
+    carteTiree = tirer_carte(JOUEUR);
+    scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
+    carteTiree = tirer_carte(JOUEUR);
+    scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
+    
+    
+    While((scoreJoueur < 21) && ((scoreBanque + scoreBanqueCachee) < 21) && ())
     {
+        if((scoreBanque + scoreBanqueCache) )
     }
 
     return 0;
