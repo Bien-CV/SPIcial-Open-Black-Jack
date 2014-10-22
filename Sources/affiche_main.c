@@ -7,6 +7,9 @@ void afficher_mains(short joueur)
       {
         afficher_carte(num);
       }
+      else{
+        afficher_mains_cachee();
+      }
     }
 }
 
