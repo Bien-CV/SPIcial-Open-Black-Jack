@@ -30,18 +30,6 @@ typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, val
 struct {t_num numero; t_couleur couleur;}s_carte;
 */
 
-short tirer_carte(short joueur)
-{
-    int numCarteTiree;
-    do
-    {
-        numCarteTiree = rand()%(51);
-    }while(cartes[numCarteTiree] != LIBRE);
-    cartes[numCarteTiree] = joueur;
-    return(numCarteTiree+1);
-}
-
-
 int main()
 {
     int indice1, indice2;
