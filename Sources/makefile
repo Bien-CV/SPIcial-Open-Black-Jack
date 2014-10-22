@@ -1,4 +1,4 @@
-blackJack: fonctions.o main.o fonctions.h
+blackJack: fonctions.o main.o 
 	gcc -o blackJack fonctions.o main.o 
 
 fonctions.o: fonctions.c fonctions.h
