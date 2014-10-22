@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "fonctions.h"
 
 #define NB_CARTES 52
 
