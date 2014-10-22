@@ -19,8 +19,8 @@
 
 
     short cartes[52];
-    short nbAsJoueur;
-    short nbAsBanque;
+    short nb_as_joueur;
+    short nb_as_banque;
     
     
 
