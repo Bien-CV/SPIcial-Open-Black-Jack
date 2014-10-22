@@ -1,3 +1,9 @@
+/**
+ * \fn void afficher_mains_cachee(short joueur)
+ * \brief Affiche la main de la banque 
+ */
+
+
 void afficher_mains_cachee(short joueur)
 {
 	int i;
