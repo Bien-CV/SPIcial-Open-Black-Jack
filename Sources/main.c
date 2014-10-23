@@ -4,9 +4,9 @@
  * \author Arthur LEMEE
  * \version 1.0
  * \date 22 octobre 2014
- * 
+ *
  * programme de jeu: Black Jack
- * 
+ *
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,13 +32,18 @@
 short cartes[52];
 short nb_as_joueur;
 short nb_as_banque;
-    
+short as_banque_cachee;
+short moinsDix_joueur;
+short moinsDix_Banque;
+short moinsDix_BanqueCachee;
+
+
 short carteTiree;
 short scoreJoueur;
 short scoreBanque;
 short scoreBanqueCachee;
-    
-    
+
+
 /*
 typedef enum {COEURS, CARREAUX, PIQUES, TREFLES}t_couleur;
 typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, valet, dame, rois}t_num;
@@ -58,37 +63,53 @@ int main()
     srand((unsigned)time(NULL));
     nb_as_banque = 0;
     nb_as_joueur = 0;
+    as_banque_cachee = 0;
     scoreJoueur = 0;
     scoreBanque = 0;
     scoreBanqueCachee = 0;
     int choixJoueur = -1;
-    
-    
+    moinsDix_Banque = 0;
+    moinsDix_BanqueCachee = 0;
+    moinsDix_joueur = 0;
+
+
     carteTiree = tirer_carte(BANQUE_CACHEE);
     scoreBanqueCachee = evaluer_score(BANQUE_CACHEE, carteTiree, &scoreBanqueCachee);
     carteTiree = tirer_carte(BANQUE);
     scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
-    
+
     carteTiree = tirer_carte(JOUEUR);
     scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
     carteTiree = tirer_carte(JOUEUR);
     scoreJoueur = evaluer_score(JOUEUR, carteTiree, &scoreJoueur);
-    
-    
-    
-    while((scoreJoueur <= 21) && ((scoreBanque + scoreBanqueCachee) <= 21) && ((choixJoueur != 2) || ((scoreBanque + scoreBanqueCachee) < 17)))
+
+
+
+    while((scoreJoueur < 21) && ((scoreBanque + scoreBanqueCachee) < 21) && ((choixJoueur != 2) || ((scoreBanque + scoreBanqueCachee) < 17)))
     {
         if((scoreBanque + scoreBanqueCachee) < 17)
         {
             carteTiree = tirer_carte(BANQUE);
             scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
         }
-        if((scoreBanque + scoreBanqueCachee) < 21 && scoreJoueur < 21)
+        if((scoreBanque + scoreBanqueCachee) > 21)
         {
-            
-            printf("\nvotre main: ");
+            if(as_banque_cachee == 1 && moinsDix_BanqueCachee < as_banque_cachee)
+            {
+                scoreBanqueCachee = scoreBanqueCachee - 10;
+                moinsDix_BanqueCachee++;
+            }
+            else if(nb_as_banque > 0 && moinsDix_Banque < nb_as_banque)
+            {
+                moinsDix_Banque++;
+            }
+        }
+        if((scoreBanque + scoreBanqueCachee) < 21)
+        {
+
+            printf("\nvotre main:\n");
             afficher_mains(JOUEUR);
-            printf("\nMain de la banque: ");
+            printf("\nMain de la banque:\n");
             afficher_mains(BANQUE);
             printf("\nle score:\nVous: %i / Banque: %i", scoreJoueur, scoreBanque);
             do
@@ -103,7 +124,7 @@ int main()
             }
         }
     }
-    
+
     if(scoreJoueur <=21 && (scoreBanque + scoreBanqueCachee) <= 21)
     {
         if(scoreJoueur < (scoreBanque + scoreBanqueCachee))
@@ -130,20 +151,20 @@ int main()
     {
         if(scoreJoueur > 21)
         {
-            printf("Vous avez perdu, votre score %i est superieur a 21\nscore de la banque: %i\n:'(", scoreJoueur, scoreBanque+scoreBanqueCachee);
+            printf("Vous avez perdu, votre score %i est supérieur à 21\nscore de la banque: %i\n:'(", scoreJoueur, scoreBanque+scoreBanqueCachee);
         }else
         {
             if((scoreBanque + scoreBanqueCachee) > 21)
             {
-                printf("Vous avez gagne!!! Le score de la banque %i est superieur a 21\nvotre score: %i\n^^ ;P :D", scoreBanque+scoreBanqueCachee, scoreJoueur);
+                printf("Vous avez gagne!!! Le score de la banque %i est supérieur à 21\nvotre score: %i\n^^ ;P :D", scoreBanque+scoreBanqueCachee, scoreJoueur);
             }
         }
     }
-    printf("\nvotre main: ");
+    printf("\n\nvotre main:\n");
     afficher_mains(JOUEUR);
-    printf("\nMain de la banque: ");
-    afficher_mains(BANQUE);
-    
+    printf("\nMain de la banque:\n");
+    afficher_mains_cachee();
+
 
     return 0;
 }
