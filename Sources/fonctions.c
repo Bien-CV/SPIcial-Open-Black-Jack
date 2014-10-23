@@ -20,8 +20,10 @@
 short cartes[52];
 short nb_as_joueur;
 short nb_as_banque;
-
-
+short as_banque_cachee;
+short moinsDix_joueur;
+short moinsDix_Banque;
+short moinsDix_BanqueCachee;
 
 
 
@@ -138,6 +140,7 @@ short donner_valeur_carte(short joueur, short carte)
   if(!carte){
     if(joueur==JOUEUR) nb_as_joueur++;
     if(joueur==BANQUE) nb_as_banque++;
+    if(joueur==BANQUE_CACHEE) as_banque_cachee++;
     return 11;
   }
   
@@ -152,6 +155,17 @@ short donner_valeur_carte(short joueur, short carte)
 short evaluer_score(short joueur, short carte_recue,short *score)
 {
     *score=(*score)+donner_valeur_carte(joueur,carte_recue);
+    if(*score > 21)
+    {
+        if(joueur == JOUEUR && nb_as_joueur > 0 && moinsDix_joueur < nb_as_joueur)
+        {
+            *score = *score-10;
+            moinsDix_joueur++;
+        }/*else
+        {
+            if(joueur == BANQUE)
+        }*/
+    }
     return(*score);
   //return(/**score=*/(*score)+donner_valeur_carte(joueur,carte_recue));
 }
