@@ -101,6 +101,7 @@ int main()
             }
             else if(nb_as_banque > 0 && moinsDix_Banque < nb_as_banque)
             {
+                scoreBanque = scoreBanque - 10;
                 moinsDix_Banque++;
             }
         }
