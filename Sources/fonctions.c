@@ -113,7 +113,11 @@ void afficher_mains(short joueur)
 
 
 
-//afficher_mains_cachee.c
+/**
+* \fn void afficher_mains_cachee(short joueur)
+* \brief Affiche la main de la banque
+*/
+
 
 void afficher_mains_cachee(void)
 {
