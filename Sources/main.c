@@ -56,7 +56,7 @@ struct {t_num numero; t_couleur couleur;}s_carte;
  * \fn int main()
  * \brief fonction principale
  * distribue les cartes, puis demande à la banque et au joueur s'ils veulent tirer des cartes.'
- * Arrête le jeu lorsque le score est trop élevé ou quand les joueur ne tirent plus de carte'
+ * Arrête le jeu lorsque le score est trop élevé ou quand les joueur ne tirent plus de carte, ou encore s'il y a un black Jack.'
  */
 int main()
 {
