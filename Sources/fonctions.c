@@ -31,7 +31,6 @@ short moinsDix_BanqueCachee;
 *\fn short tirer_carte(short joueur)
 *\brief tire aléatoirement une carte du jeu "libre" pour un joueur
 */
-
 short tirer_carte(short joueur)
 {
     short numCarteTiree;
