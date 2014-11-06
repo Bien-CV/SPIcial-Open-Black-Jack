@@ -115,7 +115,7 @@ int main()
             printf("\nle score:\nVous: %i / Banque: %i", scoreJoueur, scoreBanque);
             do
             {
-                printf("\n1 - Tirer une autre carte\n2 - s'arreter la\n-------------\nVotre choix:");
+                printf("\n1 - Tirer une autre carte\n2 - s'arreter la\n-------------\nVotre choix: ");
                 scanf("%i", &choixJoueur);
             }while(choixJoueur != 1 && choixJoueur != 2);
             if(choixJoueur == 1)
