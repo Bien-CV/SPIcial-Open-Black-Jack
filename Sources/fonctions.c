@@ -173,11 +173,7 @@ short evaluer_score(short joueur, short carte_recue,short *score)
         {
             *score = *score-10;
             moinsDix_joueur++;
-        }/*else
-        {
-            if(joueur == BANQUE)
-        }*/
+        }
     }
     return(*score);
-  //return(/**score=*/(*score)+donner_valeur_carte(joueur,carte_recue));
 }
