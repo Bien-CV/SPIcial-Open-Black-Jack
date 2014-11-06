@@ -27,8 +27,10 @@ short moinsDix_BanqueCachee;
 
 
 
-
-//Fonction-tirer_carte.c
+/**
+* \fn short tirer_carte(short joueur)
+* \brief tire une carte dans la pioche
+*/
 
 short tirer_carte(short joueur)
 {
@@ -45,8 +47,10 @@ short tirer_carte(short joueur)
 
 
 
-
-//afficher_carte(short num).c
+/**
+* \fn void afficher_carte(short num)
+* \brief Affiche la carte du joueur
+*/
 
 void afficher_carte(short num)
 {
