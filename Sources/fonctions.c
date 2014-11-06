@@ -87,7 +87,11 @@ void afficher_carte(short num)
 
 
 
-//afficher_mains.c
+
+/**
+* \fn void afficher_mains(short joueur)
+* \brief Affiche la main d'un joueur
+*/
 
 void afficher_mains(short joueur)
 {
