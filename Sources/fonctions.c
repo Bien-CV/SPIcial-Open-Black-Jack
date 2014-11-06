@@ -44,14 +44,10 @@ short tirer_carte(short joueur)
 }
 
 
-
-
-
 /**
 * \fn void afficher_carte(short num)
 * \brief Affiche la carte du joueur
 */
-
 void afficher_carte(short num)
 {
     if ( ( num < DEB_COEURS ) || ( num > FIN_TREFLES ) ) {
@@ -87,16 +83,10 @@ void afficher_carte(short num)
 }
 
 
-
-
-
-
-
 /**
 * \fn void afficher_mains(short joueur)
 * \brief Affiche la main d'un joueur
 */
-
 void afficher_mains(short joueur)
 {
   int i;
@@ -113,16 +103,10 @@ void afficher_mains(short joueur)
 }
 
 
-
-
-
-
 /**
 * \fn void afficher_mains_cachee(short joueur)
 * \brief Affiche la main de la banque
 */
-
-
 void afficher_mains_cachee(void)
 {
 	int i;
@@ -135,11 +119,6 @@ void afficher_mains_cachee(void)
 	}
 }
 
-
-
-
-
-//evaluer_score.c
 
 /**
  * \fn short donner_valeur_carte(short joueur,short carte)
@@ -159,6 +138,7 @@ short donner_valeur_carte(short joueur, short carte)
   if(carte>=9) return 10;
   return (carte+1);
 }
+
 
 /**
  * \fn short evaluer_score(short joueur,short carte_recue,short *score)
