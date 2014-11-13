@@ -3,7 +3,7 @@ SPIcial-Open-Black-Jack
 
 Black Jack C-project.
 
-Travail restant : Try-hard les tests CUnit
+Travail restant : Try-hard les tests CUnit.
 
 Membres du Groupe: (veuillez vous rajouter)
 - Yann
