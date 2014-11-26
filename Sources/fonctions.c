@@ -51,7 +51,8 @@ short tirer_carte(short joueur)
 */
 void afficher_carte(short num)
 {
-    if ( ( num < DEB_COEURS ) || ( num > FIN_TREFLES ) ) {
+	if ( ( num < DEB_COEURS ) || ( num > FIN_TREFLES ) ) {
+    		CU_ASSERT(( num < DEB_COEURS ) || ( num > FIN_TREFLES ));
 		printf("Carte incorrecte.");
 		return;
 	}
