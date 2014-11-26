@@ -1,5 +1,6 @@
 void test_tirer_carte(){
-	CU_ASSERT(joueur<=3 && joueur>=0);	
+	// joueur n'est pas paramètre de retour CU_ASSERT(joueur<=3 && joueur>=0);
+	CU_ASSERT(tirer_carte(0)>0 && tirer_carte(0) );
 }
 
 void test_afficher_carte()
@@ -29,5 +30,6 @@ void evaluer_score()
 
 int main()
 {
-
+	CU_initialize_registry(void);
+	CU_cleanup_registry(void);
 }
