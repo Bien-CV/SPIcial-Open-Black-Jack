@@ -1,3 +1,16 @@
+/**
+ * \file evaluer_score.c
+ * \brief fichier de la fonction
+ * \author Arthur LEMEE, Yann GUENVER, Jean-Baptiste DUBOIS, Baptiste CANOVAS-VIRLY.
+ * \version 1.0
+ * \date 22 octobre 2014
+ * 
+ * Afficher la main de la banque
+ * 
+ */
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #define NB_CARTES 52
