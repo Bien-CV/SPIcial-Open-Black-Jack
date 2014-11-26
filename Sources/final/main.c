@@ -1,38 +1,65 @@
-void test_tirer_carte(){
-	// joueur n'est pas paramètre de retour CU_ASSERT(joueur<=3 && joueur>=0);
-	CU_ASSERT(tirer_carte(0)>0 && tirer_carte(0) );
-}
+/**
+ * \file main.c
+ * \brief programme principal
+ * \author Arthur LEMEE, Yann GUENVER, Jean-Baptiste DUBOIS, Baptiste CANOVAS-VIRLY.
+ * \version 1.0
+ * \date 22 octobre 2014
+ *
+ * programme de jeu: Black Jack
+ *
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "fonctions.h"
 
-void test_afficher_carte()
-{
-	CU_ASSERT(( num < DEB_COEURS ) || ( num > FIN_TREFLES ));
-}
+#define NB_CARTES 52
 
-void test_afficher_mains()
-{
-	
-}
+#define LIBRE 0
+#define BANQUE 1
+#define JOUEUR 2
+#define BANQUE_CACHEE 3
 
-void test_afficher_mains_cachee()
-{
-	
-}
+#define DEB_COEURS 0
+#define FIN_COEURS 12
+#define DEB_CARREAUX 13
+#define FIN_CARREAUX 25
+#define DEB_PIQUES 26
+#define FIN_PIQUES 38
+#define DEB_TREFLES 39
+#define FIN_TREFLES 51
 
-void test_donner_valeur_carte()
-{
 
-}
+short cartes[52];
+short nb_as_joueur;
+short nb_as_banque;
+short as_banque_cachee;
+short moinsDix_joueur;
+short moinsDix_Banque;
+short moinsDix_BanqueCachee;
 
-void evaluer_score()
-{
 
-}
+short carteTiree;
+short scoreJoueur;
+short scoreBanque;
+short scoreBanqueCachee;
 
+
+/*
+typedef enum {COEURS, CARREAUX, PIQUES, TREFLES}t_couleur;
+typedef enum {as = 1, deux, trois, quatre, cinq, six, cept, huit, neuf, dix, valet, dame, rois}t_num;
+
+struct {t_num numero; t_couleur couleur;}s_carte;
+*/
+
+
+/**
+ * \fn int main()
+ * \brief fonction principale
+ * distribue les cartes, puis demande à la banque et au joueur s'ils veulent tirer des cartes.'
+ * Arrête le jeu lorsque le score est trop élevé ou quand les joueur ne tirent plus de carte, ou encore s'il y a un black Jack.'
+ */
 int main()
 {
-
-	CU_initialize_registry(void);
-	
     srand((unsigned)time(NULL));
     nb_as_banque = 0;
     nb_as_joueur = 0;
@@ -48,7 +75,6 @@ int main()
 
     carteTiree = tirer_carte(BANQUE_CACHEE);
     scoreBanqueCachee = evaluer_score(BANQUE_CACHEE, carteTiree, &scoreBanqueCachee);
-	CU_ASSERT();
     carteTiree = tirer_carte(BANQUE);
     scoreBanque = evaluer_score(BANQUE, carteTiree, &scoreBanque);
 
@@ -141,7 +167,5 @@ int main()
     afficher_mains_cachee();
 
 
-	CU_cleanup_registry(void);
-	
     return 0;
 }
