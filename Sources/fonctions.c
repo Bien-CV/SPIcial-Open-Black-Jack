@@ -32,9 +32,13 @@ short moinsDix_BanqueCachee;
 *\fn short tirer_carte(short joueur)
 *\brief tire aléatoirement une carte du jeu "libre" pour un joueur
 */
+
+void test_tirer_carte(){
+	CU_ASSERT(joueur<=3 && joueur>=0);	
+}
+
 short tirer_carte(short joueur)
 {
-    CU_ASSERT(joueur<=3 && joueur>=0);
     short numCarteTiree;
     do
     {
@@ -45,6 +49,11 @@ short tirer_carte(short joueur)
 }
 
 
+void test_afficher_carte()
+{
+	CU_ASSERT(( num < DEB_COEURS ) || ( num > FIN_TREFLES ));
+}
+
 /**
 * \fn void afficher_carte(short num)
 * \brief Affiche la carte du joueur
@@ -52,7 +61,6 @@ short tirer_carte(short joueur)
 void afficher_carte(short num)
 {
 	if ( ( num < DEB_COEURS ) || ( num > FIN_TREFLES ) ) {
-    		CU_ASSERT(( num < DEB_COEURS ) || ( num > FIN_TREFLES ));
 		printf("Carte incorrecte.");
 		return;
 	}
@@ -92,6 +100,7 @@ void afficher_carte(short num)
 void afficher_mains(short joueur)
 {
   int i;
+  CU_ASSERT(joueur<=3 && joueur>=0);
   for(i = 0;  i < 52; i++)
     {
     if(cartes[i]==joueur)
