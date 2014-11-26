@@ -10,3 +10,11 @@ Membres du Groupe: (veuillez vous rajouter)
 - JB
 - Arthur
 - Baptiste
+
+=======================
+
+Compte-rendu:
+
+Makefile
+Exemple debugging
+Analyse rapide
