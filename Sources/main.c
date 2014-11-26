@@ -1,7 +1,7 @@
 /**
  * \file main.c
  * \brief programme principal
- * \author Arthur LEMEE
+ * \author Arthur LEMEE, Yann GUENVER, Jean-Baptiste DUBOIS, Baptiste CANOVAS-VIRLY.
  * \version 1.0
  * \date 22 octobre 2014
  *
