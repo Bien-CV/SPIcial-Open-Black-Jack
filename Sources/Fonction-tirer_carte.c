@@ -1,7 +1,7 @@
 /**
  * \file Fonction-tirer_carte.c
  * \brief fichier de la fonction
- * \author Arthur LEMEE
+ * \author Arthur LEMEE, Yann GUENVER, Jean-Baptiste DUBOIS, Baptiste CANOVAS-VIRLY.
  * \version 1.0
  * \date 22 octobre 2014
  * 

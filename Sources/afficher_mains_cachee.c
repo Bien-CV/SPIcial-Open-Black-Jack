@@ -1,4 +1,19 @@
 /**
+ * \file afficher_mains_cachee.c
+ * \brief fichier de la fonction
+ * \author Arthur LEMEE, Yann GUENVER, Jean-Baptiste DUBOIS, Baptiste CANOVAS-VIRLY.
+ * \version 1.0
+ * \date 22 octobre 2014
+ * 
+ * Afficher la main de la banque
+ * 
+ */
+
+
+
+
+
+/**
  * \fn void afficher_mains_cachee(short joueur)
  * \brief Affiche la main de la banque 
  */
