@@ -34,6 +34,7 @@ short moinsDix_BanqueCachee;
 */
 short tirer_carte(short joueur)
 {
+    CU_ASSERT(joueur<=3 && joueur>=0);
     short numCarteTiree;
     do
     {
