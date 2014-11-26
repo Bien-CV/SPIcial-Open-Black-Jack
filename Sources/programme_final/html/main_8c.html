@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Groupe 2 : Black Jack : Référence du fichier main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Groupe 2 : Black Jack
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ce projet consiste à développer un programme simple simulant le jeux de carte Black Jack avec sa documentation dans le but de valider les compétences du cours.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>programme principal  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &quot;fonctions.h&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a022803913146916c632a8d0782cb7dbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a022803913146916c632a8d0782cb7dbc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NB_CARTES</b>&#160;&#160;&#160;52</td></tr>
+<tr class="separator:a022803913146916c632a8d0782cb7dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508cc209fbc99ea975d1c1ecb5f1c6fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a508cc209fbc99ea975d1c1ecb5f1c6fe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LIBRE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a508cc209fbc99ea975d1c1ecb5f1c6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a8403ad0170c8f0a3ccbb6f982f36d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6a8403ad0170c8f0a3ccbb6f982f36d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BANQUE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aa6a8403ad0170c8f0a3ccbb6f982f36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f907d351a198b9a0405ce45155625dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f907d351a198b9a0405ce45155625dc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOUEUR</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a7f907d351a198b9a0405ce45155625dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f74699ca6f213b3297382d27152578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06f74699ca6f213b3297382d27152578"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BANQUE_CACHEE</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a06f74699ca6f213b3297382d27152578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3167868edabf23ce42007cfa46f0a34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3167868edabf23ce42007cfa46f0a34"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEB_COEURS</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab3167868edabf23ce42007cfa46f0a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907dc60a26479ff6bf53792573e4bafa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a907dc60a26479ff6bf53792573e4bafa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FIN_COEURS</b>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a907dc60a26479ff6bf53792573e4bafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaac26fcb2ef9b0c98dbcd70395f81d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaac26fcb2ef9b0c98dbcd70395f81d4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEB_CARREAUX</b>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:adaac26fcb2ef9b0c98dbcd70395f81d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5f41c3b532ee5dbea0aa4abcad0c5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e5f41c3b532ee5dbea0aa4abcad0c5c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FIN_CARREAUX</b>&#160;&#160;&#160;25</td></tr>
+<tr class="separator:a5e5f41c3b532ee5dbea0aa4abcad0c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af174177234917e71a4ddc296b65bf836"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af174177234917e71a4ddc296b65bf836"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEB_PIQUES</b>&#160;&#160;&#160;26</td></tr>
+<tr class="separator:af174177234917e71a4ddc296b65bf836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59b61abc1fe046e0165a739067b1854b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59b61abc1fe046e0165a739067b1854b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FIN_PIQUES</b>&#160;&#160;&#160;38</td></tr>
+<tr class="separator:a59b61abc1fe046e0165a739067b1854b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776e9059fbac10978154260ee7ebfe08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a776e9059fbac10978154260ee7ebfe08"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEB_TREFLES</b>&#160;&#160;&#160;39</td></tr>
+<tr class="separator:a776e9059fbac10978154260ee7ebfe08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef89a2a14b5ec6b3999fed241935ca9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef89a2a14b5ec6b3999fed241935ca9d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FIN_TREFLES</b>&#160;&#160;&#160;51</td></tr>
+<tr class="separator:aef89a2a14b5ec6b3999fed241935ca9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction principale distribue les cartes, puis demande à la banque et au joueur s'ils veulent tirer des cartes.' Arrête le jeu lorsque le score est trop élevé ou quand les joueur ne tirent plus de carte, ou encore s'il y a un black Jack.' <br/></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4afa838396554698e0668c1a09161ebc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4afa838396554698e0668c1a09161ebc"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>cartes</b> [52]</td></tr>
+<tr class="separator:a4afa838396554698e0668c1a09161ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f90764a2168917eb0c360c066a47b02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f90764a2168917eb0c360c066a47b02"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>nb_as_joueur</b></td></tr>
+<tr class="separator:a0f90764a2168917eb0c360c066a47b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7bc0727efe41c6056e4308041f7b88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e7bc0727efe41c6056e4308041f7b88"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>nb_as_banque</b></td></tr>
+<tr class="separator:a9e7bc0727efe41c6056e4308041f7b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b3ceafe9e2ee024b2bfe5295d9682e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b3ceafe9e2ee024b2bfe5295d9682e"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>as_banque_cachee</b></td></tr>
+<tr class="separator:ab5b3ceafe9e2ee024b2bfe5295d9682e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e39900cf5ad3c0f12f63db338c4e85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70e39900cf5ad3c0f12f63db338c4e85"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>moinsDix_joueur</b></td></tr>
+<tr class="separator:a70e39900cf5ad3c0f12f63db338c4e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf8392aedf19d1a6cd778db8d947fa6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cf8392aedf19d1a6cd778db8d947fa6"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>moinsDix_Banque</b></td></tr>
+<tr class="separator:a7cf8392aedf19d1a6cd778db8d947fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a011215ddf238580c971f57d3ae609f16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a011215ddf238580c971f57d3ae609f16"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>moinsDix_BanqueCachee</b></td></tr>
+<tr class="separator:a011215ddf238580c971f57d3ae609f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f118bf8c50d09ea7174ac0f74ed9e82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f118bf8c50d09ea7174ac0f74ed9e82"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>carteTiree</b></td></tr>
+<tr class="separator:a0f118bf8c50d09ea7174ac0f74ed9e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85d308c804343c01ef0e7103a398907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad85d308c804343c01ef0e7103a398907"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>scoreJoueur</b></td></tr>
+<tr class="separator:ad85d308c804343c01ef0e7103a398907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef16d6e6926bd61cc8d93ac89e8d9a8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef16d6e6926bd61cc8d93ac89e8d9a8f"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>scoreBanque</b></td></tr>
+<tr class="separator:aef16d6e6926bd61cc8d93ac89e8d9a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c76c19542fa704f221e93f2a078aa05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c76c19542fa704f221e93f2a078aa05"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>scoreBanqueCachee</b></td></tr>
+<tr class="separator:a0c76c19542fa704f221e93f2a078aa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>programme principal </p>
+<dl class="section author"><dt>Auteur</dt><dd>Arthur LEMEE, Yann GUENVER, Jean-Baptiste DUBOIS, Baptiste CANOVAS-VIRLY. </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>22 octobre 2014</dd></dl>
+<p>programme de jeu: Black Jack </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par LEMEE, GUENVER, DUBOIS, CANOVAS-VIRLY.
+1.0
+</small></address>
+</body>
+</html>
